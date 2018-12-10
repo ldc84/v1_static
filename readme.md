@@ -1,6 +1,6 @@
 # validator.io static site builder  
 
-gulp.js 기반의 task running으로 validator.io 사이트를 building 합니다.  
+gulp.js 기반의 task running으로 building
 
 ## 개발/배포환경 설정  
 
@@ -26,10 +26,3 @@ gulp.js 기반의 task running으로 validator.io 사이트를 building 합니�
 > gulp deploy  
 # gh-pages에 수정된 사항을 push합니다. github page 배포용입니다.  
 ```  
-
-### 유의사항
-> - 영문만 현재 완료 (추후 다른언어 진행 예정)
-> - 반응형 페이지 ( pc / mobile )
-> - Contact > Google Spreadsheets 로 쌓임
->   - <https://docs.google.com/spreadsheets/d/1d3hQvN5iBfY3uG6-VN6cA-wPh7WuOW2RhQ8PMiiu6mk/edit?usp=sharing>
->   - 현재(2018-12-04) `Richard Kim`, `안재윤(소유자)`, `이태근` 님이 관리
