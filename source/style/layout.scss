@@ -1,0 +1,140 @@
+
+// body
+body {
+
+    &.scroll-hidden {
+        overflow:hidden;
+    }
+
+    background-color:#020306;
+    color:#fff;
+}
+
+// layout
+#contents {
+    overflow:hidden;
+    div.container {
+        position:relative; top:50px;
+        display:flex;
+        flex-flow:column;
+        justify-content: center;
+        width:100%;
+        max-width:1080px;
+        height:100%;
+        margin:0 auto;
+        opacity:0.2;
+        transition:all .6s ease-in-out;
+        &.active {
+            top:0;
+            opacity:1;
+        }
+
+        // mobile
+        @include mediaQuery($deviceSmall){
+            padding:50px 32px;
+            min-height:100vh;
+        }
+    }
+}
+
+#contents section {
+    height:100vh;
+    min-height:800px;
+
+    // mobile
+    @include mediaQuery($deviceSmall){
+        height:auto;
+        min-height:100vh;
+    }
+}
+
+// swiper
+.swiper-arrow {
+    position:absolute; top:10px; right:0;
+    display:flex;
+    justify-content: flex-end;
+    align-items:center;
+    width:364px;
+    height:20px;
+    .line {
+        position:relative;
+        width:300px;
+        height:1px;
+        margin-right:20px;
+        background-color:#5d5d5d;
+        span {
+            display:block;
+            position:absolute; top:0; left:0;
+            width:10%;
+            height:1px;
+            background-color:$color-point-1;
+        }
+    }
+    > a {
+        display:block;
+        width:20px;
+        height:20px;
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:contain;
+        outline:none;
+        &.swiper-prev {
+            background-image:url("../image/arrow-left@2x.png");
+            &:hover,
+            &:focus {
+                background-image:url("../image/arrow-right-active@2x.png");
+                transform:rotate(-180deg);
+            }
+        }
+        &.swiper-next {
+            margin-left:4px;
+            background-image:url("../image/arrow-left@2x.png");
+            transform:rotate(-180deg);
+            &:hover,
+            &:focus {
+                background-image:url("../image/arrow-right-active@2x.png");
+                transform:rotate(0deg);
+            }
+        }
+    }
+
+    // mobile
+    @include mediaQuery($deviceSmall){
+        top:7px;
+        width:120px;
+        .line {
+            width:120px;
+            margin-right:0;
+        }
+        > a {
+            display:none;
+        }
+    }
+}
+
+/* bodymovin */
+.loading {
+    display:none;
+    position:fixed; top:0; left:0; right:0; bottom:0;
+    background-color:rgba(0,0,0,0.8);
+    z-index:20;
+    > .bodymovin {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:20%;
+        margin:0 auto;
+        padding-top:20%;
+    }
+}
+
+.layer-success {
+    position:fixed; top:0; left:-100%;
+    width:100%;
+    padding:15px;
+    font-size:rem(18);
+    background-color:$color-point-1;
+    text-align:center;
+    opacity:0;
+    z-index:-1;
+}

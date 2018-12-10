@@ -1,0 +1,106 @@
+
+#quickMenu {
+    position:fixed; top:50%; right:40px;
+    transform:translateY(-50%);
+    width:24px;
+    text-align:center;
+    z-index:8;
+
+    a {
+        display:block;
+        @include fontNone;
+        transition:all .3s ease-in-out;
+    }
+
+    .indicator {
+        a {
+            width:9px;
+            height:9px;
+            margin:10px auto 0 auto;
+            border-radius:50%;
+            background-color:#4a4a4a;
+            &:first-child {
+                margin-top:0;
+            }
+
+            &:hover,
+            &.active {
+                background-color:$color-point-1;
+            }
+        }
+    }
+
+    .arrow {
+        margin-top:100px;
+        > a {
+            position:relative;
+            display:block;
+            width:24px;
+            height:24px;
+            background:url("../image/icon-up.png") no-repeat 0 0;
+
+            &:hover,
+            &:focus {
+                background-image:url("../image/icon-down-active.png");
+                transform:rotate(-180deg);
+            }
+
+            &.down {
+                margin-top:12px;
+                background:url("../image/icon-up.png") no-repeat 0 0;
+                transform:rotate(-180deg);
+
+                &:hover,
+                &:focus {
+                    background-image:url("../image/icon-down-active.png");
+                    transform:rotate(0deg);
+                }
+            }
+        }
+    }
+
+    // mobile
+    @include mediaQuery($deviceSmall){
+        display:none;
+    }
+}
+
+.quick-down {
+    position:fixed; right:40px; bottom:40px;
+    > a {
+        display:block;
+        width:60px;
+        height:60px;
+        background:$color-point-1 url("../image/share.svg") no-repeat center center;
+        background-size:24px 30px;
+        border-radius:30px;
+        overflow:hidden;
+        transition:all .2s ease-in-out;
+        span {
+            display:block;
+            width:150px;
+            margin-top:10px;
+            color:#fff;
+            font-size:rem(16);
+            line-height:60px;
+            opacity:0;
+            transition:all .3s ease-in-out;
+        }
+        &:hover,
+        &:active {
+            width:244px;
+            padding:0 0 0 64px;
+            background-position-x:28px;
+            span {
+                margin-top:0;
+                opacity:1;
+                transition-delay: .2s;
+            }
+        }
+    }
+
+    // mobile
+    @include mediaQuery($deviceSmall){
+        display:none;
+    }
+}

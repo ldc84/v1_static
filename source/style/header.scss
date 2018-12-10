@@ -1,0 +1,76 @@
+// header styling
+header {
+    position:fixed; top:0; left:0; right:0;
+    height:104px;
+    box-sizing:border-box;
+    z-index:10;
+    h1 {
+        position:absolute; top:40px; left:40px;
+        @include fontNone;
+        width:75px;
+        height:64px;
+        background:url("../image/logo.png") no-repeat 0 0;
+        background-size:contain;
+    }
+
+    .menu {
+        position:absolute; top:63px; right:40px;
+        width:24px;
+        height:20px;
+        @include fontNone;
+        transition:all .3s ease-in-out;
+        > span {
+            display:block;
+            height:1px;
+            margin-top:8px;
+            background-color:$color-point-1;
+            transition:all .3s ease-in-out;
+            &:first-child {
+                margin-top:0;
+            }
+            &:nth-child(2) {
+                width:12px;
+            }
+        }
+
+    }
+
+
+    // active
+    &.active .menu {
+        width:34px;
+        height:34px;
+
+        > span {
+            &:nth-child(1) {
+                margin-top:12px;
+                transform:rotate(-135deg);
+            }
+            &:nth-child(2) {
+                margin-left:100px;
+                opacity:0;
+            }
+            &:nth-child(3) {
+                margin-top:-10px;
+                transform:rotate(-45deg);
+            }
+        }
+    }
+
+    // mobile
+    @include mediaQuery($deviceSmall){
+        height:55px;
+        background-color:rgba(0,0,0,0.5);
+        h1 {
+            top:16px; left:16px;
+            width:36px;
+            height:32px;
+        }
+
+        .menu {
+            top:23px; right:16px;
+        }
+
+    }
+
+}
