@@ -2,6 +2,7 @@
 /dist
 /deploy
 /.publish
+/.idea
 
 # Log files
 npm-debug.log*
