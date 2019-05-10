@@ -387,7 +387,7 @@
         var name = form.find('#name');
         var email = form.find('#email');
         var message = form.find('#message');
-        var url = '';
+        var url = 'https://script.google.com/macros/s/AKfycbwrxUy8GeRzmwGqzKzIYrZ2kEjRd_H_sVHxeFr6h0i82PNJ8ew/exec';
         var layerSuccess = $('.layer-success');
 
         // submit 성공
