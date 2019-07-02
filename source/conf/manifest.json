@@ -1,0 +1,13 @@
+{
+  "short_name": "PWA Test",
+  "name": "PWA Test!!",
+  "icons": [{
+    "src": "favicon.png",
+    "type": "image/png",
+    "sizes": "144x144"
+  }],
+  "start_url": "/v1_static/index.html",
+  "background_color": "#f1f2f7",
+  "theme_color": "#dc143c",
+  "display": "fullscreen"
+}

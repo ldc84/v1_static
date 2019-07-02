@@ -326,7 +326,6 @@ gulp.task('local', function () {
     runSequence('clean','copy:image','copy:fonts','copy:pdf','convert:sass:sourcemap','copy:conf','html',['copy:js','copy:node_modules'],['connect','watch']);
 });
 
-
 gulp.task('deploy',function () {
     runSequence('clean','copy:image','copy:fonts','copy:pdf','convert:sass','copy:conf','html',['copy:js','copy:node_modules'],'release');
 });
