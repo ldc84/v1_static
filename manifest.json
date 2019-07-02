@@ -9,18 +9,6 @@
     "src": "favicon.png",
     "type": "image/png",
     "sizes": "96x96"
-  }, {
-    "src": "favicon.png",
-    "type": "image/png",
-    "sizes": "144x144"
-  }, {
-    "src": "favicon.png",
-    "type": "image/png",
-    "sizes": "192x192"
-  }, {
-    "src": "favicon.png",
-    "type": "image/png",
-    "sizes": "1024x1024"
   }],
   "start_url": "/?launcher=true",
   "background_color": "#f1f2f7",
