@@ -3,6 +3,15 @@
 // 모든 anchor에 이벤트 바인딩하자. internal link로 판명될 경우 smooth scrolling 처리
 // 최초 로딩,URL에서 hash가 변경될 경우 smooth scrolling 하지 않기로
 // --------------------------------------------------------------------------------
+
+if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('./sw.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope:',  registration.scope);
+    }).catch(function(error) {
+        console.log('ServiceWorker registration failed:', error);
+    });
+}
+
 (function ($) {
     var _isSetClassName = true;
     var indicatorNum = 0;
