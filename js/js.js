@@ -4,11 +4,12 @@
 // 최초 로딩,URL에서 hash가 변경될 경우 smooth scrolling 하지 않기로
 // --------------------------------------------------------------------------------
 
-if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('./sw.js').then(function(registration) {
-        console.log('ServiceWorker registration successful with scope:',  registration.scope);
-    }).catch(function(error) {
-        console.log('ServiceWorker registration failed:', error);
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg);
+          });
     });
 }
 
