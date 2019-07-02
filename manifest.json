@@ -4,11 +4,7 @@
   "icons": [{
     "src": "favicon.png",
     "type": "image/png",
-    "sizes": "48x48"
-  }, {
-    "src": "favicon.png",
-    "type": "image/png",
-    "sizes": "96x96"
+    "sizes": "144x144"
   }],
   "start_url": "/?launcher=true",
   "background_color": "#f1f2f7",
