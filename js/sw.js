@@ -1,5 +1,5 @@
 // 설치후 작업
-var PRECACHE = 'precache-v1';
+var PRECACHE = 'https://ldc84.github.io/v1_static/';
 var RUNTIME = 'runtime';
 
 // list the files you want cached by the service worker
