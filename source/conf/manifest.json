@@ -4,10 +4,15 @@
   "icons": [{
     "src": "favicon.png",
     "type": "image/png",
+    "sizes": "72x72"
+  }, {
+    "src": "favicon-144.png",
+    "type": "image/png",
     "sizes": "144x144"
   }],
-  "start_url": "/v1_static/index.html",
+  "start_url": ".",
   "background_color": "#f1f2f7",
   "theme_color": "#dc143c",
-  "display": "fullscreen"
+  "display": "standalone",
+  "orientation": "portrait"
 }

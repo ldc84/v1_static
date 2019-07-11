@@ -1,3 +1,18 @@
+// 서비스 워커가 있는지 확인
+if ('serviceWorker' in navigator) {
+    
+    // 페이지 로드 후 서비스 워커를 등록
+    window.addEventListener('load', function() {
+        
+        // 서비스 워커 등록 처리
+        navigator.serviceWorker.register('./js/sw.js').then(function(result) {
+            console.log('등록 완료 !', result);
+        }).catch(function(error) {
+            console.log('오류...', error);
+        });
+    });
+}
+
 // --------------------------------------------------------------------------------
 // hash location + smooth scrolling
 // 모든 anchor에 이벤트 바인딩하자. internal link로 판명될 경우 smooth scrolling 처리
