@@ -1,13 +1,13 @@
 // 설치후 작업
-var PRECACHE = 'v1_static';
+var PRECACHE = 'precache-v1';
 var RUNTIME = 'runtime';
 
 // list the files you want cached by the service worker
 PRECACHE_URLS = [
   'index.html',
   './',
-  './css/style.css',
-  './js/js.js'
+  'style.css',
+  'main.js'
 ];
 
 
