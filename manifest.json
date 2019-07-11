@@ -5,6 +5,10 @@
     "src": "favicon.png",
     "type": "image/png",
     "sizes": "72x72"
+  }, {
+    "src": "favicon.png",
+    "type": "image/png",
+    "sizes": "144x144"
   }],
   "start_url": "https://ldc84.github.io/v1_static/",
   "background_color": "#f1f2f7",
