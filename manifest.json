@@ -2,9 +2,13 @@
   "short_name": "PWA Test",
   "name": "PWA Test!!",
   "icons": [{
-    "src": "favicon.ico",
-    "sizes": "64x64 32x32 24x24 16x16",
-    "type": "image/x-icon"
+    "src": "favicon.png",
+    "type": "image/png",
+    "sizes": "72x72"
+  }, {
+    "src": "favicon-144.png",
+    "type": "image/png",
+    "sizes": "144x144"
   }],
   "start_url": "./index.html",
   "background_color": "#f1f2f7",
