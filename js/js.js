@@ -5,7 +5,7 @@ if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         
         // 서비스 워커 등록 처리
-        navigator.serviceWorker.register('./sw.js').then(function(result) {
+        navigator.serviceWorker.register('./js/sw.js').then(function(result) {
             console.log('등록 완료 !', result);
         }).catch(function(error) {
             console.log('오류...', error);
